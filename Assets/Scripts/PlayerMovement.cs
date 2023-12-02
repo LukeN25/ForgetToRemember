@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 8f;
     private float horizontal;
     private float vertical;
+    public Animator animator;
 
     [SerializeField] private Rigidbody2D rb;
 
@@ -14,10 +15,18 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
+        Animate();
     }
 
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal, vertical).normalized * speed;
+       
+    }
+
+    void Animate()
+    {
+        animator.SetFloat("Horizontal", rb.velocity.x);
+        animator.SetFloat("Vertical", rb.velocity.y);
     }
 }
