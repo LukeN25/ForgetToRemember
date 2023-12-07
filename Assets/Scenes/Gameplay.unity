@@ -4075,7 +4075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 131ebaa071a0da64baa62818595e759b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 0}
+  nameText: {fileID: 2142132026}
   dialogueText: {fileID: 0}
 --- !u!4 &1660617862
 Transform:
