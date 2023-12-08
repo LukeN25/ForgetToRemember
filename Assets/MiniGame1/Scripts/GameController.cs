@@ -33,6 +33,7 @@ public class GameController : MonoBehaviour
         GetButtons();
         AddListeners();
         AddGamePuzzles();
+        Shuffle(gamePuzzles);
         gameGuesses = gamePuzzles.Count / 2;
     }
 
@@ -86,17 +87,9 @@ public class GameController : MonoBehaviour
             secondGuessIndex = int.Parse(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name);
             secondGuessPuzzle = gamePuzzles[secondGuessIndex].name;
             btns[secondGuessIndex].image.sprite = gamePuzzles[secondGuessIndex];
+            countGuesses++;
 
             StartCoroutine(CheckIfThePuzzlesMatch());
-
-            if(firstGuessPuzzle == secondGuessPuzzle) 
-            {
-                Debug.Log("Yahoo");
-            }
-            else
-            {
-                Debug.Log("Nayhoo");
-            }
         }
     }
 
@@ -132,6 +125,17 @@ public class GameController : MonoBehaviour
         {
             Debug.Log("Game Is Finished");
             Debug.Log("It took you " + countGuesses + " many guess(es) to finish the game");
+        }
+    }
+
+    void Shuffle(List<Sprite> list)
+    {
+        for(int i = 0; i < list.Count; i++)
+        {
+            Sprite temp = list[i];
+            int randomIndex = Random.Range(i, list.Count);
+            list[i] = list[randomIndex];
+            list[randomIndex] = temp;
         }
     }
 }
