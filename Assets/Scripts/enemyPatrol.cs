@@ -5,7 +5,7 @@ using UnityEngine;
 public class enemyPatrol : MonoBehaviour
 {
     public GameObject pointA;
-    public GameObject point B;
+    public GameObject pointB;
     private Rigidbody2D rb;
     private Animator anim;
     private Transform currentPoint;
@@ -24,6 +24,7 @@ public class enemyPatrol : MonoBehaviour
     void Update()
     {
         Vector2 point = currentPoint.position - transform.position;
+
         if(currentPoint == pointB.transform)
         {
             rb.velocity = new Vector2(speed, 0);
