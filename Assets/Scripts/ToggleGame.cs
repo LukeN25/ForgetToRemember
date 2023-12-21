@@ -8,6 +8,8 @@ public class ToggleGame : MonoBehaviour
 {
     [SerializeField] string sceneToLoad;
     bool enterGame1 = false;
+    public bool isNextScene = true;
+    [SerializeField] public SceneData sceneData;
 
     void OnTriggerEnter2D()
     {
@@ -25,6 +27,7 @@ public class ToggleGame : MonoBehaviour
         {
             if (Input.GetKeyDown("e"))
             {
+                sceneData.isNextScene = isNextScene;
                 SceneManager.LoadScene(sceneToLoad);
             }
         }
