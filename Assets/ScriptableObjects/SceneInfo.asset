@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: SceneInfo
   m_EditorClassIdentifier: 
   isNextScene: 1
+  minigame1Complete: 0
+  minigame2Complete: 0
+  minigame3Complete: 0
+  minigame4Complete: 0
+  posX: 0
+  posY: 0
