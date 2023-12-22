@@ -25,12 +25,14 @@ public class ToggleGame : MonoBehaviour
     {
         enterGame = true;
         UICanvas.SetActive(true);
+        Debug.Log("entered");
     }
 
     void OnTriggerExit2D(Collider2D Player)
     {
         enterGame = false;
         UICanvas.SetActive(false);
+        Debug.Log("exited");
     }
 
     void Update()
