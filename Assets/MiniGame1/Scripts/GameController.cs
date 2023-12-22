@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
@@ -23,6 +24,9 @@ public class GameController : MonoBehaviour
     private int firstGuessIndex, secondGuessIndex;
 
     private string firstGuessPuzzle, secondGuessPuzzle;
+    private string endText;
+
+    public TextMeshProUGUI EndText;
 
     bool gameFinished;
     public SceneData sceneData;
@@ -40,10 +44,13 @@ public class GameController : MonoBehaviour
         Shuffle(gamePuzzles);
         gameGuesses = gamePuzzles.Count / 2;
         gameFinished = false;
+        endText = null;
     }
 
     void Update()
     {
+        EndText.text = endText;
+
         if(gameFinished == true)
         {
             if (Input.GetKeyDown("e"))
@@ -143,6 +150,8 @@ public class GameController : MonoBehaviour
             Debug.Log("Game Is Finished");
             Debug.Log("It took you " + countGuesses + " many guess(es) to finish the game");
 
+            endText = ("It took you " + countGuesses + " many guesses to finish the game" 
+                + " Press E to Continue");
             gameFinished = true;
         }
     }
