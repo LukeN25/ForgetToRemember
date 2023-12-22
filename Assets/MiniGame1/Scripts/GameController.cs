@@ -25,6 +25,7 @@ public class GameController : MonoBehaviour
     private string firstGuessPuzzle, secondGuessPuzzle;
 
     bool gameFinished;
+    public SceneData sceneData;
 
     void Awake()
     {
@@ -48,6 +49,7 @@ public class GameController : MonoBehaviour
             if (Input.GetKeyDown("e"))
             {
                 SceneManager.LoadScene("Gameplay");
+                sceneData.minigame1Complete = true;
             }
         }
     }

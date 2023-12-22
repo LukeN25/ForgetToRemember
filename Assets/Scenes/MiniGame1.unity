@@ -186,6 +186,7 @@ MonoBehaviour:
   puzzles: []
   gamePuzzles: []
   btns: []
+  sceneData: {fileID: 11400000, guid: b8d29046a5b4cfe40b3a776caefe4671, type: 2}
 --- !u!1 &739728246
 GameObject:
   m_ObjectHideFlags: 0
