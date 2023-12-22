@@ -14,12 +14,12 @@ public class ToggleGame : MonoBehaviour
 
     public Transform playerPosition;
 
-    void OnTriggerEnter2D()
+    void OnTriggerEnter2D(Collider2D Player)
     {
         enterGame = true;
     }
 
-    void OnTriggerExit2D()
+    void OnTriggerExit2D(Collider2D Player)
     {
         enterGame = false;
     }
