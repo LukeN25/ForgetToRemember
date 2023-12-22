@@ -13,6 +13,9 @@ public class SceneData : ScriptableObject
     public float posX;
     public float posY;
 
+    public bool hint1;
+    public bool hint2;
+
     public float plantHealth = 0f;
 
     void OnEnable()
@@ -26,5 +29,8 @@ public class SceneData : ScriptableObject
         posY = 0;
 
         plantHealth = 0f;
+
+        hint1 = false;
+        hint2 = false;
     }
 }

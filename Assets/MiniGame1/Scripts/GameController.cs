@@ -153,6 +153,7 @@ public class GameController : MonoBehaviour
             endText = ("It took you " + countGuesses + " many guesses to remember" 
                 + " Press E to Continue");
             gameFinished = true;
+            sceneData.hint1 = true;
         }
     }
 

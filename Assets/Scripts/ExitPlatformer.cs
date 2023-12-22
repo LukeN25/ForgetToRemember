@@ -11,5 +11,6 @@ public class ExitPlatformer : MonoBehaviour
     {
         SceneManager.LoadScene("Gameplay");
         sceneData.minigame2Complete = true;
+        sceneData.hint2 = true;
     }
 }
