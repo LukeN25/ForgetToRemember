@@ -14,7 +14,7 @@ public class InteractSceneChange : MonoBehaviour
     {
         if( Input.GetKeyDown("e")|| Input.GetKeyDown("f"))
         {
-            sceneData.isNextScene = isNextScene;
+            
             SceneManager.LoadScene(scene);
         }
     }

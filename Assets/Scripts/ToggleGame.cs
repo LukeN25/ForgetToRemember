@@ -7,28 +7,33 @@ using UnityEngine.SceneManagement;
 public class ToggleGame : MonoBehaviour
 {
     [SerializeField] string sceneToLoad;
-    bool enterGame1 = false;
+    bool enterGame = false;
+
     public bool isNextScene = true;
     [SerializeField] public SceneData sceneData;
 
+    public Transform playerPosition;
+
     void OnTriggerEnter2D()
     {
-        enterGame1 = true;
+        enterGame = true;
     }
 
     void OnTriggerExit2D()
     {
-        enterGame1 = false;
+        enterGame = false;
     }
 
     void Update()
     {
-        if (enterGame1 == true)
+        if (enterGame == true)
         {
             if (Input.GetKeyDown("e"))
             {
                 sceneData.isNextScene = isNextScene;
                 SceneManager.LoadScene(sceneToLoad);
+                sceneData.posX = playerPosition.position.x;
+                sceneData.posY = playerPosition.position.y;
             }
         }
     }

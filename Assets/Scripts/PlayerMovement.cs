@@ -8,8 +8,16 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal;
     private float vertical;
     public Animator animator;
+    public GameObject player;
+
+    public SceneData sceneData;
 
     [SerializeField] private Rigidbody2D rb;
+
+    void Start()
+    {
+        player.transform.position = new Vector3 (sceneData.posX , sceneData.posY, 0);
+    }
 
     void Update()
     {

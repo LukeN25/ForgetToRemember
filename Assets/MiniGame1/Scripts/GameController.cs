@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class GameController : MonoBehaviour
 
     private string firstGuessPuzzle, secondGuessPuzzle;
 
+    bool gameFinished;
+
     void Awake()
     {
         puzzles = Resources.LoadAll<Sprite>("Sprites/Cards");
@@ -35,6 +38,18 @@ public class GameController : MonoBehaviour
         AddGamePuzzles();
         Shuffle(gamePuzzles);
         gameGuesses = gamePuzzles.Count / 2;
+        gameFinished = false;
+    }
+
+    void Update()
+    {
+        if(gameFinished == true)
+        {
+            if (Input.GetKeyDown("e"))
+            {
+                SceneManager.LoadScene("Gameplay");
+            }
+        }
     }
 
     void GetButtons()
@@ -125,6 +140,8 @@ public class GameController : MonoBehaviour
         {
             Debug.Log("Game Is Finished");
             Debug.Log("It took you " + countGuesses + " many guess(es) to finish the game");
+
+            gameFinished = true;
         }
     }
 
