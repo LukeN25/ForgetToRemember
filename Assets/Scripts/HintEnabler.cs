@@ -7,11 +7,10 @@ public class HintEnabler : MonoBehaviour
 
     public GameObject Hint1;
     public GameObject Hint2;
+    public GameObject Hint3;
 
     public SceneData sceneData;
 
-    
-    // Update is called once per frame
     void Update()
     {
         if(sceneData.hint1 == true)
@@ -24,12 +23,19 @@ public class HintEnabler : MonoBehaviour
             Hint2.SetActive(true);
         }
 
+        if (sceneData.hint3 == true)
+        {
+            Hint3.SetActive(true);
+        }
+
         if (Input.GetKeyDown("e"))
         {
             sceneData.hint1 = false;
             sceneData.hint2 = false;
+            sceneData.hint3 = false;
             Hint1.SetActive(false);
             Hint2.SetActive(false);
+            Hint3.SetActive(false);
         }
     }
 }

@@ -19,6 +19,8 @@ public class CupGame : MonoBehaviour
 
     private string winText;
     public TextMeshProUGUI WinText;
+
+    public SceneData sceneData;
     
     void Start()
     {
@@ -43,6 +45,8 @@ public class CupGame : MonoBehaviour
             WinText.text = ("You remebered. Press E to continue.");
             if(Input.GetKeyDown("e")) 
             {
+                sceneData.minigame3Complete = true;
+                sceneData.hint3 = true;
                 SceneManager.LoadScene("gameplay");
             }
         }

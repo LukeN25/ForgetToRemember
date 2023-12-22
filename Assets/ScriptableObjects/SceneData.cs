@@ -14,6 +14,7 @@ public class SceneData : ScriptableObject
 
     public bool hint1;
     public bool hint2;
+    public bool hint3;  
 
     public float plantHealth = 0f;
 
@@ -30,5 +31,6 @@ public class SceneData : ScriptableObject
 
         hint1 = false;
         hint2 = false;
+        hint3 = false;
     }
 }

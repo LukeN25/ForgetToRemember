@@ -18,6 +18,15 @@ EditorBuildSettings:
     path: Assets/Scenes/MiniGame 2.unity
     guid: 59dba5ce65de80843989a52096208784
   - enabled: 1
+    path: Assets/Scenes/Minigame3.unity
+    guid: c3b6e570ebf182546bd42cc8a6c99345
+  - enabled: 1
     path: Assets/Scenes/Controls.unity
     guid: 9fc59babfcaa29441b6373652c05c674
+  - enabled: 1
+    path: Assets/Scenes/Win Scene.unity
+    guid: 7205afa1ec001fd4493c3e1db4e553b5
+  - enabled: 1
+    path: Assets/Scenes/Lose Scene.unity
+    guid: 7128031a1c4f3594b9840251928b8854
   m_configObjects: {}
