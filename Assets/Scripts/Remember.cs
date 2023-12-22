@@ -9,6 +9,8 @@ public class Remember : MonoBehaviour
     public GameObject Button2;
     public GameObject Button3;
 
+    public GameManager gameManager;
+
     bool nearBed;
 
     void Start()
@@ -32,15 +34,17 @@ public class Remember : MonoBehaviour
     }
     void Update()
     {
-        if (nearBed == true)
+        if (gameManager.minigame1Complete == true && gameManager.minigame2Complete == true && gameManager.minigame3Complete)
         {
-            if (Input.GetKeyDown("e"))
+            if (nearBed == true)
             {
-                Button1.SetActive(true);
-                Button2.SetActive(true);
-                Button3.SetActive(true);
+                if (Input.GetKeyDown("e"))
+                {
+                    Button1.SetActive(true);
+                    Button2.SetActive(true);
+                    Button3.SetActive(true);
+                }
             }
         }
-        
     }
 }

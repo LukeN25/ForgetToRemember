@@ -9,12 +9,10 @@ public class GameManager : MonoBehaviour
     public bool minigame1Complete;
     public bool minigame2Complete;
     public bool minigame3Complete;
-    public bool minigame4Complete;
 
     public GameObject Minigame1;
     public GameObject Minigame2;
     public GameObject Minigame3;
-    public GameObject Minigame4;
 
 
     void Update()
@@ -22,7 +20,6 @@ public class GameManager : MonoBehaviour
         minigame1Complete = sceneData.minigame1Complete;
         minigame2Complete = sceneData.minigame2Complete;
         minigame3Complete = sceneData.minigame3Complete;
-        minigame4Complete = sceneData.minigame4Complete;
 
         if (minigame1Complete == true)
         {
@@ -37,11 +34,6 @@ public class GameManager : MonoBehaviour
         if (minigame3Complete == true)
         {
             Minigame3.SetActive(false);
-        }
-
-        if (minigame4Complete == true)
-        {
-            Minigame4.SetActive(false);
         }
     }
 }

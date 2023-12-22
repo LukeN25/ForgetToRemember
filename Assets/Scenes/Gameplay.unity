@@ -3570,7 +3570,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &846330182
 GameObject:
@@ -3835,6 +3835,7 @@ Transform:
   m_Children:
   - {fileID: 318893109}
   - {fileID: 1924607510}
+  - {fileID: 1759448847}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10382,7 +10383,7 @@ Transform:
   - {fileID: 554926052}
   - {fileID: 143612609}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1217933444
 BoxCollider2D:
@@ -10553,7 +10554,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0006313324, y: -0.0760127}
+  m_Offset: {x: -0.0017433912, y: -0.017436102}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -10564,7 +10565,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.24295819, y: 0.19879639}
+  m_Size: {x: 0.15905115, y: 0.2747877}
   m_EdgeRadius: 0
 --- !u!95 &1264936678
 Animator:
@@ -10752,7 +10753,7 @@ GameObject:
   - component: {fileID: 1320188316}
   - component: {fileID: 1320188315}
   m_Layer: 5
-  m_Name: Guess1
+  m_Name: Guess 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13229,14 +13230,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneData: {fileID: 11400000, guid: b8d29046a5b4cfe40b3a776caefe4671, type: 2}
-  minigame1Complete: 0
-  minigame2Complete: 0
-  minigame3Complete: 0
-  minigame4Complete: 0
+  minigame1Complete: 1
+  minigame2Complete: 1
+  minigame3Complete: 1
   Minigame1: {fileID: 557957449}
   Minigame2: {fileID: 1892065803}
   Minigame3: {fileID: 0}
-  Minigame4: {fileID: 0}
 --- !u!4 &1526538874
 Transform:
   m_ObjectHideFlags: 0
@@ -13577,15 +13576,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759448845}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.032, y: 0.057, z: -3.3663538}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.664, y: -0.32433617, z: -3.4390626}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1114110294}
   - {fileID: 1770335275}
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 950578329}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1759448848
 MonoBehaviour:
@@ -13602,6 +13601,7 @@ MonoBehaviour:
   Button1: {fileID: 1320188313}
   Button2: {fileID: 1456363680}
   Button3: {fileID: 1397558655}
+  gameManager: {fileID: 1526538873}
 --- !u!61 &1759448849
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13906,8 +13906,8 @@ MonoBehaviour:
     name: Patrick
     sentences:
     - Have you played that game we got you for Christmas?
-    - 
-    - Don't forget to water your plant!
+    - And are you still playing that card game that you and dad used to play?
+    - Oh don't forget to water your plant!
 --- !u!114 &1868667338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14619,7 +14619,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Hint 1
+  m_text: 'I remember playing this with my son when he was young....
 
 '
   m_isRightToLeft: 0
@@ -14903,7 +14903,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Hint 2
+  m_text: 'Oh this is the game my son and grandson got me last christmas!
 
 
 '
