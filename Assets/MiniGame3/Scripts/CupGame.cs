@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 public class CupGame : MonoBehaviour
 {
     int count = 0; 
@@ -13,7 +15,10 @@ public class CupGame : MonoBehaviour
     public float MixerUp;
     public int rounds = 3;//rounds to mix
 
-    bool finishedRevealing;
+    bool finishedRevealing = false;
+
+    private string winText;
+    public TextMeshProUGUI WinText;
     
     void Start()
     {
@@ -23,6 +28,25 @@ public class CupGame : MonoBehaviour
         StartCoroutine(CupMixer());
     }
 
+    private void Update()
+    {
+        WinText.text = winText;
+        if(finishedRevealing == true)
+        {
+            StartCoroutine(CupMixer());
+            finishedRevealing = false;
+        }
+
+        if(count == 3)
+        {
+            cups.SetActive(false);
+            WinText.text = ("You remebered. Press E to continue.");
+            if(Input.GetKeyDown("e")) 
+            {
+                SceneManager.LoadScene("gameplay");
+            }
+        }
+    }
     public IEnumerator CupMixer(float wfs = .3f)
     {
         Vector3[] ts = new Vector3[cups.Length]; 
@@ -58,7 +82,6 @@ public class CupGame : MonoBehaviour
         yield return new WaitForSecondsRealtime(1); 
         cup.GetComponent<Image>().sprite = standing; 
         die.enabled = false; 
-        finishedRevealing = true;
     }
     public void UpdateCounter() => counterTxt.text = "Counter " + count;
     public void ClickedCup(GameObject g)
@@ -76,6 +99,7 @@ public class CupGame : MonoBehaviour
             UpdateCounter(); 
             StartCoroutine(CounterAnimation(Color.red)); 
         }
+        finishedRevealing=true;
     }
     public IEnumerator CounterAnimation(Color c) 
     { 
