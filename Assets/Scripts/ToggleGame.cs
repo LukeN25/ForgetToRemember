@@ -13,15 +13,24 @@ public class ToggleGame : MonoBehaviour
     [SerializeField] public SceneData sceneData;
 
     public Transform playerPosition;
+    public GameObject UICanvas;
+
+    void Start()
+    {
+        enterGame = false;
+        UICanvas.SetActive(false);
+    }
 
     void OnTriggerEnter2D(Collider2D Player)
     {
         enterGame = true;
+        UICanvas.SetActive(true);
     }
 
     void OnTriggerExit2D(Collider2D Player)
     {
         enterGame = false;
+        UICanvas.SetActive(false);
     }
 
     void Update()
