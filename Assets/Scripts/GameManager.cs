@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public GameObject Minigame3;
     public GameObject Minigame4;
 
+
     void Update()
     {
         minigame1Complete = sceneData.minigame1Complete;

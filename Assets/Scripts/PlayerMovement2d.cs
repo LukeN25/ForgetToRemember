@@ -11,6 +11,8 @@ public class PlayerMovement2d : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
+    public bool groundGood = false;
+
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -18,11 +20,6 @@ public class PlayerMovement2d : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-        }
-
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
 
         Flip();

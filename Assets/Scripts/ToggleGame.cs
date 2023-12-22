@@ -43,6 +43,7 @@ public class ToggleGame : MonoBehaviour
                 SceneManager.LoadScene(sceneToLoad);
                 sceneData.posX = playerPosition.position.x;
                 sceneData.posY = playerPosition.position.y;
+                sceneData.plantHealth++;
             }
         }
     }
