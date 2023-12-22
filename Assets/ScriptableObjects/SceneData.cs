@@ -13,6 +13,8 @@ public class SceneData : ScriptableObject
     public float posX;
     public float posY;
 
+    public float plantHealth = 0f;
+
     void OnEnable()
     {
         minigame1Complete = false;
@@ -22,5 +24,7 @@ public class SceneData : ScriptableObject
 
         posX = 0;
         posY = 0;
+
+        plantHealth = 0f;
     }
 }

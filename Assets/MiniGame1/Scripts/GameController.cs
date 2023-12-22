@@ -150,7 +150,7 @@ public class GameController : MonoBehaviour
             Debug.Log("Game Is Finished");
             Debug.Log("It took you " + countGuesses + " many guess(es) to finish the game");
 
-            endText = ("It took you " + countGuesses + " many guesses to finish the game" 
+            endText = ("It took you " + countGuesses + " many guesses to remember" 
                 + " Press E to Continue");
             gameFinished = true;
         }
